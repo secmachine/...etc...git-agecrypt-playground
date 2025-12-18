@@ -1,0 +1,49 @@
+{
+  "name": "x-git-agecrypt.playground",
+  "version": "0.2512.1-a",
+  "private": false,
+  "#useful": {
+    "install bun on debian": "eget --asset ^baseline --asset ^musl --asset ^profile oven-sh/bun",
+    "install bun on macos": "not-the-brew install oven-sh/bun/bun",
+    "bob's pwd": "pEacE-26"
+  },
+  "scripts": {
+    "status": "git-agecrypt status",
+    "init": "git-agecrypt init",
+    "add": "git-agecrypt config add -r age1xgrjk6eyckfkj85zac7jzhwusagj0vh77y64pk0tpczs5qgjmvdswgmjyq -p protected/secret2.md",
+    "test": "git-agecrypt textconv protected/secret2.md",
+    "help": "git-agecrypt config add -i ../bobs.identity",
+    "age:create-identity": "age-keygen | age -p -a > ../bob2s.identity && chmod 600 ../bob2s.identity",
+    "get-key:linux": "secret-tool lookup application age identity-file ~/identities.age",
+    "add-key:linux": "secret-tool store --label=\"my#2607 Age Identity Passphrase\" application age identity-file ~/identities.age",
+    "export:linux": "export AGE_SECRET_KEY=$(secret-tool lookup application age identity-file ~/identities.age)",
+    "remove-key:linux": "secret-tool clear --label=\"my#2607 Age Identity Passphrase\"",
+    "list-keys:linux": "secret-tool search application age"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+    "@clack/prompts": "latest",
+    "@types/bun": "latest"
+  },
+  "packageManager": "bun@1.3.5",
+  "engines": {
+    "node": ">=24",
+    "bun": "^1.3",
+    "pnpm": "please-use-bun",
+    "npm": "please-use-bun",
+    "yarn": "please-use-bun"
+  },
+  "devEngines": {
+    "runtime": {
+      "name": "node",
+      "onFail": "error"
+    },
+    "packageManager": {
+      "name": "bun",
+      "onFail": "warn"
+    }
+  },
+  "workspaces": [
+  ]
+}
