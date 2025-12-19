@@ -1,0 +1,2 @@
+/protected/** filter=git-agecrypt diff=git-agecrypt
+/plain/** filter=git-agecrypt diff=git-agecrypt
