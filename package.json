@@ -1,6 +1,6 @@
 {
   "name": "x-git-agecrypt.playground",
-  "version": "0.2512.1-a",
+  "version": "0.2512.1-b",
   "private": false,
   "#useful": {
     "install bun on macos": "eget --asset ^profile oven-sh/bun",
