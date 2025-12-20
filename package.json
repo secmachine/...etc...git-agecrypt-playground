@@ -8,6 +8,11 @@
     "bob's identity": "age1xgrjk6eyckfkj85zac7jzhwusagj0vh77y64pk0tpczs5qgjmvdswgmjyq",
     "bob's pwd": "pEacE-26"
   },
+  "#readme": [
+    "If security (macos) or secret-tool (linux) do not handle the passphrase, prepend ops relaying on decryption with AGE_PASSPHRASE=[see the pwd above].",
+    "Like if you use smerge, run 'AGE_PASSPHRASE=$(secret-tool lookup application age identity-file ./bobs.identity) smerge ...'"
+
+  ],
   "scripts": {
     "status": "git-agecrypt status",
     "init": "git-agecrypt init",
@@ -19,7 +24,7 @@
     "get-key:linux": "secret-tool lookup application age identity-file ./bobs.identity",
     "add-key:macos": "security add-generic-password -a \"$(whoami)\" -s \"age-passphrase-my-2607\" -l \"my#2607 Age Identity Passphrase\" -w",
     "add-key:linux": "secret-tool store --label=\"my#2607 Age Identity Passphrase\" application age identity-file ./bobs.identity",
-    "export:linux": "export AGE_SECRET_KEY=$(secret-tool lookup application age identity-file ~/identities.age)",
+    "export:linux": "export AGE_PASSPHRASE=$(secret-tool lookup application age identity-file ~/identities.age)",
     "remove-key:linux": "secret-tool clear --label=\"my#2607 Age Identity Passphrase\"",
     "list-keys:linux": "secret-tool search application age"
   },
