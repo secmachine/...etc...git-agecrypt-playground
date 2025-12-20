@@ -19,6 +19,7 @@
     "add-identity": "git-agecrypt config add -i ./bobs.identity",
     "add-bobs-file": "git-agecrypt config add -r age1xgrjk6eyckfkj85zac7jzhwusagj0vh77y64pk0tpczs5qgjmvdswgmjyq -p protected/secrets2bobs.md",
     "test-bobs-file": "git-agecrypt textconv protected/secrets2bobs.md",
+    "add-all-files": "git-agecrypt config add -r age1xgrjk6eyckfkj85zac7jzhwusagj0vh77y64pk0tpczs5qgjmvdswgmjyq -p protected/* -p plain/*",
     "status:recipients": "git-agecrypt config list --recipient",
     "age:create-identity": "age-keygen | age -p -a > ./bob2s.identity && chmod 600 ./bob2s.identity",
     "get-key:linux": "secret-tool lookup application age identity-file ./bobs.identity",

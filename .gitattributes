@@ -1,3 +1,6 @@
 .gitattributes !filter !diff
+.gitignore !filter !diff
 /protected/** filter=git-agecrypt diff=git-agecrypt
-/plain/** filter=git-agecrypt diff=git-agecrypt
+/protected/README-NOW.md !filter !diff
+/plain/** !filter !diff
+/plain/plain2.not filter=git-agecrypt diff=git-agecrypt
