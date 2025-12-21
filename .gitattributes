@@ -1,5 +1,11 @@
+# general exceptions
 .gitattributes !filter !diff
 .gitignore !filter !diff
+git-agencrypt.toml !filter !diff
+*.identity !filter !diff
+*.age !filter !diff
+
+# custom
 /protected/** filter=git-agecrypt diff=git-agecrypt
 /protected/README-NOW.md !filter !diff
 /plain/** !filter !diff

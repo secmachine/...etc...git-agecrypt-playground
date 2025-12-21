@@ -1,5 +1,8 @@
+[aliases]
+bob='age1xgrjk6eyckfkj85zac7jzhwusagj0vh77y64pk0tpczs5qgjmvdswgmjyq'
+
 [config]
-"protected/secrets2bobs.md" = ["age1xgrjk6eyckfkj85zac7jzhwusagj0vh77y64pk0tpczs5qgjmvdswgmjyq"]
-"protected" = ["age1xgrjk6eyckfkj85zac7jzhwusagj0vh77y64pk0tpczs5qgjmvdswgmjyq"]
-"**/*.md" = ["age1xgrjk6eyckfkj85zac7jzhwusagj0vh77y64pk0tpczs5qgjmvdswgmjyq"]
+"protected/secrets2bobs.md" = ['bob']
+"protected" = ['bob']
+"**/*.md" = ['bob']
 "plain/*.not" = ["age1xgrjk6eyckfkj85zac7jzhwusagj0vh77y64pk0tpczs5qgjmvdswgmjyq"]
