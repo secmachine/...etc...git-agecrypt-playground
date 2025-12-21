@@ -1,3 +1,7 @@
+[passphrase]
+sops="sops --extract .age_passphrase secrets.enc.yaml"
+linux="secret-tool lookup application age identity-file ./bobs.identity"
+
 [aliases]
 bob='age1xgrjk6eyckfkj85zac7jzhwusagj0vh77y64pk0tpczs5qgjmvdswgmjyq'
 
